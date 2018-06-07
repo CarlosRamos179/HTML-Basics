@@ -1,0 +1,174 @@
+<!-- Aqui se listan las etiquetas basicas de HTML -->
+
+<html>
+    <head>
+        <title>BASICS HTML</title>
+    <head>
+    <body>
+        <h1 id="top">Encabezado nivel 1.</h1>
+        <h2>Encabezado nivel 2.</h2>
+        <!--Asi siguen hasta el nivel 6-->
+        <p>Parrafo normal de texto que se escribe en una siguiente linea.</p>
+        <p lang="es-us">Otro parrafo de texto normal con atributo 'lang'.</p>
+        <!--Los valores de atributos van entre comillas -->
+        <b>texto en negritas</b>
+        <br /> <!-- Salto de linea -->
+        <i>texto en italica</i>
+        <p>Ejemplo super y sub indice "4<sup>th</sup> July",  "H<sub>2</sub>O"</p>
+        <hr /> <!--Linea horizontal -->
+        <p><strong>Atencion! </strong>Esto denota mayor importancia en el texto</p>
+        <p>Este elemento indica <em>ENFASIS</em> en la palabra o parrafo.</p>
+        <blockquote cite="http://w3schools.com">
+            <p>Esto sirve para una cita larga que se identa automaticamente.</p>                
+        </blockquote>
+        <p>Y esto para citas cortas <q>Que van junto a parrafo</q></p>
+        <p>Podemos hacer abrebiaciones, Ej. <abbr title="Profesor">Prof. </abbr>Stephen Hawking.</p>
+        <p>O indicar Acronimos, Ej. <acronym title="National Aeronautics and Space Administration">NASA</acronym></p>
+        <!--Desde HTML5 se usa <abbr></abbr> para ambos, acronimos y abrebiaciones.-->
+        <p>Tambien exite una etiqueta <cite>para citas dentro de un parrafo.</cite>usadas para bibliografias por ejemplo</p>
+        <p>Esta etiqueta es <dfn>para poner una definicion</dfn></p>
+        <!--en Safari y Chrome no se pone en italica el texto dentro de <dfn> -->
+        <address>
+            <p><a href="mailto:ramos.leonc@gmail.com">Enlace al correo</a></p>
+        </address>
+        <p>Elemento <del>eliminado </del> del texto y elemento que fue <ins>insertados</ins></p>
+        <p>Eso indica que algo que <s>ya no es importante </s> pero no debe ser eliminado.</p>
+        <p></p>
+
+        <!-- LISTAS -->
+
+        <h3>Listas ordenadas</h3>
+        <ol> <!--Ordered list-->
+            <li>Elemento</li> <!--List item-->
+            <li>Elemento</li>
+            <li>Elemento</li>
+        </ol>
+
+        <ul> <!-- Unordered list -->
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+        </ul>
+
+        <dl> <!--Definition list -->
+            <dt>Definicion 1</dt>
+            <dd>Esta es la definicion de definicion1</dd>
+            <dt>Definicion 2</dt>
+            <dd>Esta es la definicion de definicion2</dd>
+        </dl>
+
+        <ul> 
+            <li>Sub- lista
+                <ul> <!-- Nested list -->
+                    <li>Elem 1</li>
+                    <li>Elem 2</li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- LINKS E IMAGENES-->
+
+        <p>Este es un link a <a href="https://www.google.com.mx/">Google</a></p>
+        <p>Esto crea un nuevo e-mail con la aplicacion predeterminada: <a href="mailto:ramos.leonc@gmail.com"> Nuevo correo</a></p>
+        <!-- El atributo "target" indica donde abrir el link (nueva pesta;a, ventana, etc) -->
+        <p>Esto te regresa al <a href="#top">principio de la pagina</a></p>
+        <!-- Se puede linkear a una parte especifica de otra pagina usando su ruta absoluta o 
+            relativa seguida de el valor #id -->
+        
+        <!-- La etiqueta img es una etiqueta vacia ya que no tiene etiqueta de cierre 
+             Las etiquetas width y height usan pixeles como unidad.
+             Es una buena practica redimensionar las imagenes en el archivo CSS.
+             El lugar donde coloques la imagen en tu codigo importa. (afecta a los parrafos)
+             El atributo 'align' fue retirado en HTML5 y ahora se usa en CSS
+             Cuida el formato, las dimensiones y la resolucion de tu imagen (e.g. Adobe Photoshop)
+        -->
+        <img src="./img/Prueba1.jpeg" alt="En caso de que no se pueda ver" title="Imagen prueba" width="70" height="70">
+        <br>
+        <img src="./img/onlineEditors.jpg" alt="Editores de texto y recomendaciones" titile="Info Extra" >
+
+        <!-- Que formato de imagen usar:
+             (bitmap -ppi- )
+            .jpeg cuando se tienen muchos colores diferentes en una imagen (Fotografias)
+            .gif o .png cuando se tengan pocos colores y del mismo color (Ilustraciones o logos)
+             72 ppi es la resolucion que tienen las pantallas de las computadoras.      
+             Otros formatos son las imagenes de vectores (no se afecta la resolucion al aumentar las dimensiones)
+             y los SVG (Scalable Vector Graphics). 
+             Los Gifs 
+        -->
+
+        <!-- <figure> se usa para relacionar una imagen o varias con una descripcion debajo. Se introdujo en HTML5 -->
+        <figure>
+            <img src="./img/figure.png" alt="barrido de imagenes con python" width="300" height="150">
+            </br>
+            <figcaption>Ordenamiento lexicografico de imagenes<br> raster usando la tecnica pixel sorting con python</figcaption>
+        </figure>
+        
+        <!-- TABLES 
+            In HTML the info of the tables is written out row by row
+        --> 
+        <hr />
+        <h4>Here we represent some tables</h4>
+
+        <table>
+            <tr> <!-- The start of a row -->
+                <th></th> <!--Empty sapce-->
+                <th scope="column">title c1</th> <!-- th for cel title & scope to indicate if it is for a column or a row-->
+                <th>title c2</th>
+            </tr>
+            <tr>
+                <th scope="row">title r2</th> 
+                <td>content</td> <!-- represent 1 individual cell of the table -->
+                <td>content</td>
+            </tr>
+            <tr>
+                <th scope="row">title r2</th>
+                <!-- colspan is for collapse 2 or more cells, it is use in <th> or <td> tags, you can also use 'rowspan' -->
+                <td colspan="2">largeContent</td> 
+            </tr>
+        </table>   
+        <hr />
+        <p>Here we distinguish between the main or titles, the body, and the last part of the table</p>
+        <!-- We do this to give better format & to manipulate in CSS.
+            It is use when the tables is larger than the page or screen.
+            The attributes 'width', 'cellpadding', 'cellspacing', 'border', and 'bgcolor' are no longer used in html, you use CSS instead.
+        -->
+        <table>
+            <thead> 
+                <tr>
+                   <th>Date</th>
+                    <th>Income</th>
+                    <th>Expenditure</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1st January</th>
+                    <td>250</td>
+                    <td>36</td>
+                </tr>
+                <tr>
+                    <th>2nd January</th>
+                    <td>285</td>
+                    <td>48</td>
+                </tr>
+                <tr>
+                    <th>31st January</th>
+                    <td>129</td>
+                    <td>64</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td>7824</td>
+                    <td>1241</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!-- FORMS 
+            
+        -->
+
+
+    </body>
+<html>
