@@ -21,7 +21,7 @@
         <blockquote cite="http://w3schools.com">
             <p>Esto sirve para una cita larga que se identa automaticamente.</p>                
         </blockquote>
-        <p>Y esto para citas cortas <q>Que van junto a parrafo</q></p>
+        <p>Y esto para citas cortas <q>Que van junto al parrafo</q></p>
         <p>Podemos hacer abrebiaciones, Ej. <abbr title="Profesor">Prof. </abbr>Stephen Hawking.</p>
         <p>O indicar Acronimos, Ej. <acronym title="National Aeronautics and Space Administration">NASA</acronym></p>
         <!--Desde HTML5 se usa <abbr></abbr> para ambos, acronimos y abrebiaciones.-->
@@ -31,31 +31,32 @@
         <address>
             <p><a href="mailto:ramos.leonc@gmail.com">Enlace al correo</a></p>
         </address>
-        <p>Elemento <del>eliminado </del> del texto y elemento que fue <ins>insertados</ins></p>
-        <p>Eso indica que algo que <s>ya no es importante </s> pero no debe ser eliminado.</p>
+        <p>Elemento <del>eliminado </del> del texto y elemento que fue <ins>insertado</ins></p>
+        <p>Esto indica que algo <s>ya no es importante </s> pero no debe ser eliminado.</p>
         <p></p>
 
         <!-- LISTAS -->
 
-        <h3>Listas ordenadas</h3>
+        <h3>Listas</h3>
+        <h4>Ordenadas</h4>
         <ol> <!--Ordered list-->
             <li>Elemento</li> <!--List item-->
             <li>Elemento</li>
             <li>Elemento</li>
         </ol>
-
+        <h4>Desordenadas</h4>
         <ul> <!-- Unordered list -->
             <li>Elemento 1</li>
             <li>Elemento 2</li>
         </ul>
-
+        <h4>De definiciones</h4>
         <dl> <!--Definition list -->
             <dt>Definicion 1</dt>
             <dd>Esta es la definicion de definicion1</dd>
             <dt>Definicion 2</dt>
             <dd>Esta es la definicion de definicion2</dd>
         </dl>
-
+        <h4>Sublistas</h4>
         <ul> 
             <li>Sub- lista
                 <ul> <!-- Nested list -->
@@ -81,7 +82,7 @@
              El atributo 'align' fue retirado en HTML5 y ahora se usa en CSS
              Cuida el formato, las dimensiones y la resolucion de tu imagen (e.g. Adobe Photoshop)
         -->
-        <img src="./img/Prueba1.jpeg" alt="En caso de que no se pueda ver" title="Imagen prueba" width="70" height="70">
+        <img src="./img/Prueba1.jpeg" alt="Msj en caso de que no se pueda ver" title="Imagen prueba" width="70" height="70">
         <br>
         <img src="./img/onlineEditors.jpg" alt="Editores de texto y recomendaciones" titile="Info Extra" >
 
@@ -102,34 +103,35 @@
             <figcaption>Ordenamiento lexicografico de imagenes<br> raster usando la tecnica pixel sorting con python</figcaption>
         </figure>
         
-        <!-- TABLES 
-            In HTML the info of the tables is written out row by row
+        <!-- TABLAS
+            En HTML la información en tablas se escribe renglón por renglón
         --> 
         <hr />
-        <h4>Here we represent some tables</h4>
+        <h4>Aqui representamos algunas tablas</h4>
 
         <table>
-            <tr> <!-- The start of a row -->
-                <th></th> <!--Empty sapce-->
-                <th scope="column">title c1</th> <!-- th for cel title & scope to indicate if it is for a column or a row-->
+            <tr> <!-- Inicio de un renglon -->
+                <th></th> <!-- Espacio vacío -->
+                <th scope="column">title c1</th> <!-- 'th' para el titulo de la celda & 'scope' para indicar si es una columna o renglon -->
                 <th>title c2</th>
             </tr>
             <tr>
                 <th scope="row">title r2</th> 
-                <td>content</td> <!-- represent 1 individual cell of the table -->
+                <td>content</td> <!-- representa una celda individual de la tabla -->
                 <td>content</td>
             </tr>
             <tr>
                 <th scope="row">title r2</th>
-                <!-- colspan is for collapse 2 or more cells, it is use in <th> or <td> tags, you can also use 'rowspan' -->
+                <!-- 'colspan' es para colapsar 2 o mas celdas y se usa en <th> o <td>. Tambien se puede usar 'rowspan' -->
                 <td colspan="2">largeContent</td> 
             </tr>
         </table>   
         <hr />
-        <p>Here we distinguish between the main or titles, the body, and the last part of the table</p>
-        <!-- We do this to give better format & to manipulate in CSS.
-            It is use when the tables is larger than the page or screen.
-            The attributes 'width', 'cellpadding', 'cellspacing', 'border', and 'bgcolor' are no longer used in html, you use CSS instead.
+        <p>Aqui distinguimos entre los titulos, el cuerpo y la ultima parte de la tabla</p>
+        <!--
+            Hacemos esto para dar mejor formato y manipularlo mejor en CSS
+            Se usa cuando la tabla es mas grande que la pagina/pantalla
+            Los atributos 'width', 'cellpadding', 'cellspacing', 'border' y 'bgcolor' se usan en CSS ya no en HTML.
         -->
         <table>
             <thead> 
@@ -166,9 +168,106 @@
         </table>
 
         <!-- FORMS 
-            
+            La informacion se envia en pares "nombre/valor"
+            La etiqueta 'form' debe llevar siempre el atributo 'action' (endpoint), y opcionalmente el metodo (que es GET por defecto) y id.
+            La informacion de un formulario puede enviarse con el método 'get' o 'post'
+            GET añade la info a la URL, y se utiliza cuando la info enviada no debe ser procesada7guardada.
+            POST envia la informacion por medio del protocolo HTTP. y se usa para procesar/guardar info.
+            <input> define una entrada en el formulario y el atributo 'type' que tipo de entrada. el atributo 'name' es necesario por el primer punto de estos comentarios.
+            El atributo 'size' ya no se usa en HTML sino en CSS.
+            El tipo de entrada 'password' no envia info de forma segura. Para esto se utiliza SSL
+            Los atributos 'cols' y 'rows' de la etiqueta <textarea> definen el tamaño en terminos de caracteres. Ya no se usan. Se usa CSS
+            Cuando usas <input type="file" /> la etiqueta <form> debe llevar un metodo POST.
+            En vez de <input type="submit" /> se puede utilizar "image" y poner una imagen
         -->
+        <h4>Formularios</h4>
+        <form action="./endopoint.js" method="GET" id="ejemplo">
+            <p>Usuario: 
+                <input type="text" name="usuario" size="15" maxlength="20" />
+            </p>
+            <p>contraseña: 
+                    <input type="password" name="contrasena" size="15" maxlength="20" />
+            </p>
+            <p>
+                <textarea name="comentarios" cols="25" rows="5">
+                    Escribe tus comentarios...
+                </textarea> 
+            </p>
+            <p>¿Cual es tu género favorito de musica?
+                <br />
+                <!-- Para usar 'checkbox' hacemos lo mismo y cambiamos el valor-->
+                <input type="radio" name="genero" value="rock" checked="checked" />Rock
+                <input type="radio" name="genero" value="pop" />Pop
+                <input type="radio" name="genero" value="jazz" />Jazz
 
+            </p>
+            <h5>Ejemplo de cajas de selección</h5>
+                <p>¿Cual es tu preferencia politica?</p>
+                    <select name="partido">
+                        <option value="default">Elija</option>
+                        <option value="pri">PRI</option>
+                        <option value="pri">PAN</option>
+                        <option value="pri">PRD</option>
+                    </select>
+                <p>¿Animal favorito? (Manten presionado CTRL para seleccionar mas de 1)</p>
 
+                    <select name="animal" size="3", multiple="multiple">
+                        <option value="gato">gato</option>
+                        <option value="perro">perro</option>
+                        <option value="ardilla">ardilla</option>
+                        <option value="caballo">caballo</option>
+                        <option value="dino">dinosaurio</option>
+                    </select>
+
+                    <!-- Se pueden mezclar imagenes y botones  -->
+                    <br /><br />
+                    <button><img src="./img/Prueba1.jpeg" alt="add" width="10" height="10"> Add</button>
+
+                    <input type="hidden" name="bookmark" value="letras"/>
+        </form>
+        <form action="./ejemplo2.js" method="POST">
+            <p>Sube una imagen</p>
+            <input type="file" name="imagen" /><br />
+            <input type="submit" value="Upload" />
+            <br /><br />
+            <!-- Etiquetado de formularios
+                Las etiquetas en los formularios ayudan a su manipulacion y expanden el área de click
+            -->
+            <label>Age: <input type="text" name="age" /></label>
+            <br />
+            Gender:
+            <input id="female" type="radio" name="gender" value="f" />
+            <label for="female">Female</label>
+            <input id="male" type="radio" name="gender" value="m" />
+            <label for="male">Female</label>
+
+            <!-- Agrupando elementos de un formulario -->
+            <fieldset>
+                <legend>Detalles de contacto</legend>
+                <label>Email:<br /> 
+                <input type="text" name="email"  /></label><br />
+                <label>Mobile:<br /> 
+                <input type="text" name="mobile"  /></label><br />
+                <label>Address:<br /> 
+                <input type="text" name="address"  /></label>
+            </fieldset>
+
+            <br /><br />
+            <!-- HTML5 puede hacer ya validacion de formularios 
+                el atributo 'required' no necesita valor, aunque puede usarse required como valor
+            -->
+            <label for="username">Username:</label>
+            <input type="text" name="username" required></form></title><br />
+            <label for="password">Password:</label>
+            <input type="text" name="password" required="required" />
+            <input type="submit" value="Submit" />
+
+            <br /><br />
+            <!-- HTML5 incluyo algunos nuevos tipos de forma para estandarizar. por ejemplo 'date', 'email', 'url', 'search' (con atributo 'placeholder'), etc. -->
+
+            <label for="salida">Fecha de salida:</label>
+            <input type="date" name="depart" required>
+            <input type="submit" value="Submit" />
+        </form>
     </body>
 <html>
