@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Multimedia en HTML</title>
+            <meta name="description" content="Media: Flash, video & audio" />
+            <!-- SWFObject script-->
+            <script type="text/javascript"
+                src="http://ajax.googleapis.com/ajax/libs/
+                swfobject/2.2/swfobject.js">
+            </script>
+            <script type="text/javascript">
+                swfobject.embedSWF("flash/bird.swf",
+                "bird", "400", "300", "8.0.0");
+            </script>
+        </head>
+        <body>
+            <!-- 
+                Para usar multimedia se utilizaba flash, guardado con la extension .fla y para poder embeberlo
+                se guardaba en un formato SWF (.swf) usando las etiquetas <object> y <embed>. Ahora es mucho mas usado JS.
+                Para ver multimedia con Flash se necesita que el navegador tenga el pluggin instalado, y segun las estadisticas 
+                el 98% de los navegadores en PCs lo tienen instalado. Desde 2005 se sabe que los navegadores ya no usan esta tecnologia.
+                Ipad y iphone no soportan flash.
+                HTML5 introdujo las etiquetas <audio> y <video>
+
+                Para insertar una animacion de flash, existen scripts en JS que pueden usar. Aqui se muestra uno de ellos
+            -->
+            <!-- Continuacion del script SWFObject -->
+            <div id="bird">
+                <p>An animation of a bird taking a shower</p>
+            </div>
+
+            <!-- 
+                Para insertar video en un navegador hay que codificarlo en un formato correcto, se puede usar:  www.mirovideoconverter.com) 
+                Los navegadores utilizan plugin/players para reproducir ciertos formatos de video.
+                Se recomienda usar WebM y MP4 como formatos cuando el video esta guardado en el servidor de la 
+                Una manera facil de introducir videos es usar los scripts que Youtube o Vimeo te proporcionan. Ya que la mayoria de los navegadores los aceptan
+                Formatos que soportara la etiqueta <video> en HTML5:
+                    H264: IE and Safari
+                    WebM: Android, Chrome, Firefox, Opera
+                Formatos de audio:
+                    MP3: Safari 5+, Chrome 6+, IE9
+                    Ogg Vorbis: Firefox 3.6, Chome 6, Opera 1.5, IE9
+            -->
+
+            <!-- 
+                'poster' se usa como la imagen que aparecera mientras carga el video 
+                'preload' que se hace cuando la pagina se carga "none", "auto", "metadata"
+                Se puede usar la etiqueta <source> dentro de <video> o <audio> para reemplazar el atributo src. Esto para indicar diferentes fuentes
+                como por ejemplo, para cargar el video en diferentes formatos. "src", "type" (formato), "codecs"(codificacion usada)
+            -->
+            <video src="img/The Band Of The Spartans.mp4"
+                poster="img/Prueba1.jpeg" 
+                width="400" height="300"
+                preload
+                controls
+                loop><p>A video of a puppy playing in the snow</p>
+            </video>
+
+            <audio src="audio/test-audio.ogg"
+                    controls preload loop>
+                    <p>This browser does not support our audio format.</p>
+            </audio>
+
+        </body>
+    </html>
