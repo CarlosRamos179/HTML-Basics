@@ -1,0 +1,25 @@
+/*
+    INTRODUCCION A CSS
+    CSS contrala la apariencia de los bloques y elementos en HTML
+    Esta conforado por un 'selector' y una 'declaracion' en {} donde estara una 'propiedad' y un 'valor'
+    selector { propiedad: valor }
+    Puede haber mas de 1 selector que lleven la misma declaracion.
+
+    Se usa la etiqueta <link href="path/to/css" type="text/css" rel="stylesheet"/> para ocupar un archivo CSS externo.
+    Debe de ir dentro del bloque <head>
+    Una pagina HTML puede tener linkeado mas de 1 archivo.
+    Para usar CSS dentro del archivo HTML se usa la etiqueta <style type="text/css"></style> Pero no es recomendado.
+    
+    En CSS se usan diferentes selectores para elementos y bloques. Estos son sensibles a mayusculas y minusculas asi que 
+    el nombre del selector debe coincidir exactamente con el del elemento, id o valor.
+    Los mas comunes son:
+
+    Universal               * {}                             selecciona todos los elementos de la pagina
+    Por tipo                h1, h2, etc. {}                  selecciona la etiqueta con ese nombre
+    Por clase      .nombreClase {} o p.nombreClase {}        selecciona el o los elementos con esa clase
+    por id                   #id {}                          selecciona los elementos con un id especifico
+    por elemento hijo       li>a {}                          selecciona solamente los elementos <a> que son hijo de un <li> pero ningun otro <a> en la pagina
+    descendente             p a {}                           seleciona cualquier elemento <a> dentro de cualquier <p> aun cuando haya mas elementos anidados
+    hermano adjacente       h1+p {}                          selecciona solo el primer <p> que sigue de un <h1> pero no otros <p>
+    hermano general         h1~p {}                          selecciona a todos los <p> que sigan de un <h1> aunque no sea el elemento siguiente inmediato
+*/
