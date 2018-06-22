@@ -2,7 +2,7 @@
     INTRODUCCION A CSS
     CSS contrala la apariencia de los bloques y elementos en HTML
     Esta conforado por un 'selector' y una 'declaracion' en {} donde estara una 'propiedad' y un 'valor'
-    selector { propiedad: valor }
+    selector { propiedad: valor; }  separando mas de una propiedad por comas
     Puede haber mas de 1 selector que lleven la misma declaracion.
 
     Se usa la etiqueta <link href="path/to/css" type="text/css" rel="stylesheet"/> para ocupar un archivo CSS externo.
@@ -22,4 +22,45 @@
     descendente             p a {}                           seleciona cualquier elemento <a> dentro de cualquier <p> aun cuando haya mas elementos anidados
     hermano adjacente       h1+p {}                          selecciona solo el primer <p> que sigue de un <h1> pero no otros <p>
     hermano general         h1~p {}                          selecciona a todos los <p> que sigan de un <h1> aunque no sea el elemento siguiente inmediato
+
+    CSS funciona en cascada, es decir; Si hay 2 o mas selectores identicos que modifiquen un elemento, el que tomara precedencia sera el ultimo en orden descendente
+    Tambien si una regla es mas espepcifica que otra habrá precedencia de lo especifico sobre lo general. Ejemplo <h1> es mas especifico que *.
+    Se puede agregar '!important' despues del valor de una propiedad para indicar que se tome en cuenta mas que las otras propiedades de ese elemento
+    Ej. p b {color: blue !important;} 
+
+    Algunas propiedades que se aplican a elementos padre heredan estas propiedades a sus elementos hijos. Tal son el caso 
+    de font-family, color, etc. pero algunos otros como padding, background, etc. no son heredados. Para hacer que un elemento
+    herede de su elemento padre usamos el valor 'inherit' en la propiedad.
+
+    Se pueden usar herramientas online para saber ocmo se veria tu pagina en diverentes OS y navegadores.
+    Tambien puedes buscar en internet si encuentras algun bug que no deje que las cosas se vean como deberian.
 */
+
+/* 
+    Color
+    El color en CSS se puede representar de 4 formas distintas: 
+        Nombre del color Ej. 'red', 'DarkCyan', etc. hay 147 colores reconocidos por los navegadores
+        Codigo hexadecimal: Cantidad de rojo, azul, y verde. Ej. #ee3e80
+        Valor RGB: rgb(100, 70, 80). Numeros entre 0 y 255
+        Valores HSL: hsl([0,360], [%], [%]) --> Solo en CSS3
+        HSL es de Hue (representado en grados), Saturation, Lightness
+
+        rgba(0,0,0,0.0) --> la 'a' es el valor alpha que indica la opacidad. Solo afecta al elemento actual y no a los hijos.
+        hsla(0,%,%,0.0) --> funciona igual que rgba
+
+        Matiz: técnicamente los colores pueden tener saturacion y brillo.
+        La saturacion es la cantidad de gris que hay.
+        El brillo es la cantidad de negro que hay.
+
+    {
+        color: VALUE;   --> color del texto
+        background-color: VALUE --> color de fondo de la caja del elemento. El valor por defecto es transparente
+        opacity: VALUE[0, 1] 
+    }
+*/
+
+
+
+ 
+
+    
