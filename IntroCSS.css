@@ -57,6 +57,60 @@
         background-color: VALUE --> color de fondo de la caja del elemento. El valor por defecto es transparente
         opacity: VALUE[0, 1] 
     }
+
+    Texto
+        Estilo
+            Serif: Con estilo al final de los trazos de las letras
+            Sans-serif: Letras gruesas
+            Monospace: Delgadas, con buena alineacion. Se usan para escribir codigo
+
+        El tamaños por defecto de la letra en lo navedgadores es de 16px.
+
+        font-family: Se usa para especificar la tipografia, pero esta debe estar instalada en la pc del usuario.
+        La siguiente propiedad para descargar la tipografia en la PC del usuario y usarla.
+        @font-face{  
+            font-family: 'tipografia'; --> Nombre con el que usaras la tipografia mas adelante
+            src: url('path/tipografiaADescargar')
+        }
+
+        Cuando indiques diferentes formatos de tu tipografia, estos deben estar listados de la siguiente manera:
+            1: eot 
+            2: woff
+            3: ttf/otf
+            4: svg
+        
+        Otras propiedades del texto son:
+            font-weight: normal, bold
+            font-style: normal, italic, oblique
+            text-transform: uppercase, lowercase, capitalize
+            letter-spacing, word-spacing [ems]
+            text-decoration: none, underline, overline, line-through, blink
+            line-height [ems]
+            text-align, vertical-align
+
+            Puedes especificar Pseudo-elementos al final de un selector
+            p.intro:first-letter
+            p.intro:first-line
+
+            Tambien puedes usar Pseudo clases que actuan como un valor extra del atributo de una clase
+            selector:
+                link --> Links que no han sido visitados
+                visited --> links que ya fueron visitados
+                hover --> cuando el cursor pasa por encima (no funciona en touchscrreens)
+                active --> cuando se da click o se activa algo
+                focus --> cuando estas listo para usar un elemwnto, Ej. escribir en un formulario
+            Ej.
+            a:hover{}
+
+            Selectores de atributos
+            Existencia  []      p[class]
+            Igualdad    [=]     p[class="dog"] 
+            Espacio     [~=]    p[class~="dog"] --> Cualquier elemento p que contenga un atriburo llamado class cuyo valor sea una lista de palabras separada por espacios y aparezca la palabra "dog".
+            Prefijo     [^=]    p[attr^="d"] --> Cualquier elemento p que contenga un atributo que inicie con "d"
+            Subcadena   [*=]    p[attr*="do"]
+            Sufijo      [$=]    p[attr$="og"]
+
+            
 */
 
 
