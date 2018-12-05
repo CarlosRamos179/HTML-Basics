@@ -24,7 +24,7 @@
         </blockquote>
         <p>Y esto para citas cortas <q>Que van junto al parrafo</q></p>
         <p>Podemos hacer abrebiaciones, Ej. <abbr title="Profesor">Prof. </abbr>Stephen Hawking.</p>
-        <p>O indicar Acronimos, Ej. <acronym title="National Aeronautics and Space Administration">NASA</acronym></p>
+        <p>O indicar Acronimos, Ej. <acronym title="National Aeronautics and Space Administration">NASA</acronym></p> 
         <!--Desde HTML5 se usa <abbr></abbr> para ambos, acronimos y abrebiaciones.-->
         <p>Tambien exite una etiqueta <cite>para citas dentro de un parrafo.</cite>usadas para bibliografias por ejemplo</p>
         <p>Esta etiqueta es <dfn>para poner una definicion</dfn></p>
@@ -40,18 +40,18 @@
 
         <h3>Listas</h3>
         <h4>Ordenadas</h4>
-        <ol> <!--Ordered list-->
-            <li>Elemento</li> <!--List item-->
+        <ol> <!--Ordenadas-->
+            <li>Elemento</li> <!--Elemento de la lista -->
             <li>Elemento</li>
             <li>Elemento</li>
         </ol>
         <h4>Desordenadas</h4>
-        <ul> <!-- Unordered list -->
+        <ul> <!-- Sin orden -->
             <li>Elemento 1</li>
             <li>Elemento 2</li>
         </ul>
         <h4>De definiciones</h4>
-        <dl> <!--Definition list -->
+        <dl> <!--Lista de definiciones -->
             <dt>Definicion 1</dt>
             <dd>Esta es la definicion de definicion1</dd>
             <dt>Definicion 2</dt>
@@ -60,7 +60,7 @@
         <h4>Sublistas</h4>
         <ul> 
             <li>Sub- lista
-                <ul> <!-- Nested list -->
+                <ul> <!-- listas identadas. sublistas -->
                     <li>Elem 1</li>
                     <li>Elem 2</li>
                 </ul>
@@ -71,13 +71,13 @@
 
         <p>Este es un link a <a href="https://www.google.com.mx/">Google</a></p>
         <p>Esto crea un nuevo e-mail con la aplicacion predeterminada: <a href="mailto:ramos.leonc@gmail.com"> Nuevo correo</a></p>
-        <!-- El atributo "target" indica donde abrir el link (nueva pesta;a, ventana, etc) -->
+        <!-- El atributo "target" indica donde abrir el link (nueva pestaña, ventana, etc) -->
         <p>Esto te regresa al <a href="#top">principio de la pagina</a></p>
         <!-- Se puede linkear a una parte especifica de otra pagina usando su ruta absoluta o 
             relativa seguida de el valor #id -->
         
         <!-- La etiqueta img es una etiqueta vacia ya que no tiene etiqueta de cierre 
-             Las etiquetas width y height usan pixeles como unidad.
+             Las propiedades width y height usan pixeles como unidad.
              Es una buena practica redimensionar las imagenes en el archivo CSS.
              El lugar donde coloques la imagen en tu codigo importa. (afecta a los parrafos)
              El atributo 'align' fue retirado en HTML5 y ahora se usa en CSS
@@ -93,8 +93,7 @@
             .gif o .png cuando se tengan pocos colores y del mismo color (Ilustraciones o logos)
              72 ppi es la resolucion que tienen las pantallas de las computadoras.      
              Otros formatos son las imagenes de vectores (no se afecta la resolucion al aumentar las dimensiones)
-             y los SVG (Scalable Vector Graphics). 
-             Los Gifs 
+             y los SVG (Scalable Vector Graphics).  
         -->
 
         <!-- <figure> se usa para relacionar una imagen o varias con una descripcion debajo. Se introdujo en HTML5 -->
@@ -177,7 +176,7 @@
             La informacion se envia en pares "nombre/valor"
             La etiqueta 'form' debe llevar siempre el atributo 'action' (endpoint), y opcionalmente el metodo (que es GET por defecto) y id.
             La informacion de un formulario puede enviarse con el método 'get' o 'post'
-            GET añade la info a la URL, y se utiliza cuando la info enviada no debe ser procesada7guardada.
+            GET añade la info a la URL, y se utiliza cuando la info enviada no debe ser procesada/guardada.
             POST envia la informacion por medio del protocolo HTTP. y se usa para procesar/guardar info.
             <input> define una entrada en el formulario y el atributo 'type' que tipo de entrada. el atributo 'name' es necesario por el primer punto de estos comentarios.
             El atributo 'size' ya no se usa en HTML sino en CSS.
@@ -187,7 +186,7 @@
             En vez de <input type="submit" /> se puede utilizar "image" y poner una imagen
         -->
         <h4>Formularios</h4>
-        <form action="./endopoint.js" method="GET" id="ejemplo">
+        <form id="ejemplo" action="./endopoint.js" method="GET">
             <p>Usuario: 
                 <input type="text" name="usuario" size="15" maxlength="20" />
             </p>
@@ -196,7 +195,6 @@
             </p>
             <p>
                 <textarea name="comentarios" cols="25" rows="5">
-                    Escribe tus comentarios...
                 </textarea> 
             </p>
             <p>¿Cual es tu género favorito de musica?
@@ -229,6 +227,11 @@
                     <br /><br />
                     <button><img src="./img/Prueba1.jpeg" alt="add" width="10" height="10"> Add</button>
 
+                    <!-- 
+                        Se utiliza para agregar formularios que no aparecen en la pagina pero que envian info. 
+                        Solo se pueden ver en el codigo. Ej. mostrar la pagina o posicion en la que se encontraba
+                        al momento de enviar el formulario.
+                    -->
                     <input type="hidden" name="bookmark" value="letras"/>
         </form>
         <form action="./ejemplo2.js" method="POST">
@@ -263,17 +266,17 @@
                 el atributo 'required' no necesita valor, aunque puede usarse required como valor
             -->
             <label for="username">Username:</label>
-            <input type="text" name="username" required></form></title><br />
+            <input type="text" name="username" required><br /><br />
             <label for="password">Password:</label>
-            <input type="text" name="password" required="required" />
-            <input type="submit" value="Submit" />
+            <input type="password" name="password" required="required" /><br />
 
-            <br /><br />
+            <br />
             <!-- HTML5 incluyo algunos nuevos tipos de forma para estandarizar. por ejemplo 'date', 'email', 'url', 'search' (con atributo 'placeholder'), etc. -->
 
             <label for="salida">Fecha de salida:</label>
             <input type="date" name="depart" required>
             <input type="submit" value="Submit" />
         </form>
+        <br /><br />
     </body>
 <html>
