@@ -110,8 +110,52 @@
             Subcadena   [*=]    p[attr*="do"]
             Sufijo      [$=]    p[attr$="og"]
 
-            
-*/
+    BOX Model
+        El tamaño de las cajas por defecto es tan grande como el contenido lo necesite.
+        Se pueden utilizar las propiedades 'height' y 'width' para controlar manualmente el tamaño de las cajas
+        'max-width', 'min-width', 'max-hight', y 'min-height' se utilizan para conservar la integridad del contenido en pantallas de distinto tamaño
+        'overflow' con valores 'hidden' o 'scroll' cuando el contenido es mayor al de la caja
+
+        Todas las cajas tienen 3 propiedades que podemos modificar: border, margin, y padding.
+        Cuando utilizamos 'width' o 'height' estas 3 propiedades son modificadas
+
+        border-width: thin/medium/thick  (se pueden usar pixeles pero no % con esta propiedad)
+        border-top-width, border-left-width, etc.
+        Ejemplo: border-width: 2px 1px 1px 2px;  (en orden de las agujas del reloj:  top, right, bottom, left)
+
+        border-style: solid/dotted/dashed/groove/etc. 
+        Se usa tambien border-top-style, etc. 
+        Aqui no podemos especificar en una linea estilos diferentes de cada lado del borde.
+
+        La propiedad 'border' te permite especificar la anchura, el estilo y el color (en ese orden) en una linea.
+        Ejemplo: border: 3px dotted #0088dd;
+
+        El valor de la propiedad de 'padding' no es heredado por elementos secundarios de la misma manera que el 
+        valor de color de la propiedad de la familia de fuentes. Por lo que hay que especificarlo siempre para 
+        cada elemento
+        Ejemplo: padding: 10px 5px 3px 1px; (Orden de las manecillas del reloj)
+        padding: 10px 20px; (left-right-padding = 10px, top-bottom-padding = 20px)
+
+        El margen controla el espacio entre cajas
+        Si una caja se encuentra encima de otra, los márgenes se colapsan, lo que significa que el más grande de los 
+        dos se utilizará y se descartarán los más pequeños.
+        Ejemplo margin: 1px 2px 3px 4px; (Orden de las manecillas del reloj)
+        margin: 10px 20px; (left-right-margin = 10px, top-bottom-margin = 20px)
+        'margin' tampoco es heredado por lo que debe especificarse para cada elemento que lo use
+
+        Si quieres centrar una caja al centro puedes usar 'right-margin' y 'left-margin' con el valor de 'auto'
+
+        Esta propiedad nos permite esconder elementos de la pagina o mostrarlos al mismo nivel 
+        display: inline/block/inline-block/none 
+
+        La propiedad 'visibility: hidden' permite esconder las cajas de la pagina pero dejando el espacio que ocuparian.
+
+        CSS3
+        border-image, box-shadow, border-radius nos serviran para la manipulacion y estilización de los bordes.
+
+
+
+
 
 
 
