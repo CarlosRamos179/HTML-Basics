@@ -153,12 +153,40 @@
         CSS3
         border-image, box-shadow, border-radius nos serviran para la manipulacion y estilización de los bordes.
 
+    Listas, tablas y formas
+        list-style-type: [none, disc, circle, square] or [decimal, upper-alpha, etc.]
+        list-style-image: url("..."); 
+        list-style-position: [outside, inside]
+        ej. list-style: inside circle https://... 
+
+        Ej. Tabla
+            body {
+                font-family: Arial, Verdana, sans-serif;
+                color: #111111;}
+            table {
+                width: 600px;}
+            th, td {
+                padding: 7px 10px 10px 10px;}
+            th {
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                font-size: 90%;
+                border-bottom: 2px solid #111111;
+                border-top: 1px solid #999;
+                text-align: left;}
+            tr.even {
+                background-color: #efefef;}
+            tr:hover {
+                background-color: #c3e6e5;}
+        
+        empty-cells: [show, hide, inherit]
+        border-spacing: []px []px (horizontal y vertical)
+        border-collapse: collapse (ignora las propiedades de empty-cells y border-spacing)
+
+        cursor: [auto, crosshair, default, pointer, move, text, wait, help, url("cursor.gif");]
+        
+        para estilizar los formularios puedes utilizar http://formalize.me
 
 
 
-
-
-
- 
-
-    
+        
