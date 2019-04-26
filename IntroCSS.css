@@ -186,7 +186,44 @@
         cursor: [auto, crosshair, default, pointer, move, text, wait, help, url("cursor.gif");]
         
         para estilizar los formularios puedes utilizar http://formalize.me
+    
+    LAYOUT 
+           Los elementos pueden dividirse en  'block-level' o 'inline'. El primero son los elementos
+           que inician en un nuevo renglon (Ej. <h1>, <p>, <ul>, etc.) y el segundo se refiere a los 
+           que estan en el mismo renglón (ej. <img>, <b>, <i>, etc.) 
 
+           Se suele agrupar elementos dentro de la etiqueta <div> y a estas etiquetas se les llama 
+           'contenedores' o elementos padre. Esto con el fin de dividir los contenidos de la pagina.
 
+           Esquemas de posicion:
+                normal (static): Cada elemento aparece en una nueva linea haciendo que los elementos se desplacen 
+                relative: Mueve al elemento hacia arriba, abajo, izq, o der, sin afectar elementos aledaños
+                absolute    : Coloca al elemento en relación con su contenedor sin afectar elementos aledaños.
+                fixed: Una forma de la posicion absoluta, sin afectar a los elementos añedaños y moviendose con la pagina(scroll)
 
-        
+                float: extrae el elemto de la posicion normal y lo coloca a la izq, o der del contenedor, convirtiendolo
+                en un bloque de nivel sobre el cual otros elementos fluyen.
+                Esta propiedad se utiliza cuando se quieren colocar unas cajas a lado de otras.
+
+                clear: [left, right, both, none, initial] especifica si un elemento puede estar al lado de elementos flotantes que lo 
+                preceden o si debe ser movido (cleared) debajo de ellos. La propiedad clear aplica a ambos elementos flotantes y no flotantes.
+
+                overflow: auto, width: 100% en el div padre solucionan el proble a de varios elementos 'inline' flotantes
+
+                Para eveitar que las cajas se traslapen podemos utilizar 'z-index' e indicar cuales debe ir al frente.
+            
+            RESOLUCIÓN
+                Se refiere a la cantidad de puntos (pixeles) que una pantalla tiene por pulgada.
+                La mayoria de diseñadores utilizan en principio una resolucion de 960x1000 para crear sus pagina.
+
+                Usa el '960 pixel grid' or '12 columns of 60px each an margin of 10px' 
+                Los grid permiten definir una cuadricula que establece proporciones y espacios entre los elementos
+
+                algunos frameworks que contienen las clases que se encargan de los margenes y medidas.
+                blueprintcss.org
+                lessframework.com
+                developer.yahoo.com/yui/grids/
+
+                Puedes utilizar @import url("style2.css"); al inicio de tu hoja de estilos para importar otros archivos CSS 
+            
+    IMAGENES
