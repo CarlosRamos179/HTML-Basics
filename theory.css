@@ -227,3 +227,12 @@
                 Puedes utilizar @import url("style2.css"); al inicio de tu hoja de estilos para importar otros archivos CSS 
             
     IMAGENES
+                Las imagenes son elementos 'inline' lo que significa que para centrarlas debemos usar
+                la propiedad 'display:block'
+
+                background-repeat: [repeat, repeat-x, repeat-y, no repeat, fixed, scroll]
+                background-position: [left center, center center, etc.]
+                *Shorthand*
+                background: [color] [image] [repeat] [attachment] [position]
+
+                rollover - este es el segundo estilo que se activa cuando el usuario pasa el mouse encima
